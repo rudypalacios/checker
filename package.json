@@ -1,0 +1,35 @@
+{
+  "name": "checker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "concurrently -n -k \"nodemon index.js\" \"cd client && npm run start\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/rudypalacios/checker.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/rudypalacios/checker/issues"
+  },
+  "homepage": "https://gitlab.com/rudypalacios/checker#readme",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "body-parser": "^1.19.2",
+    "cheerio": "^1.0.0-rc.10",
+    "classnames": "^2.3.1",
+    "express": "^4.17.3",
+    "lodash": "^4.17.21",
+    "zustand": "^3.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
